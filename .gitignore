@@ -1,0 +1,5 @@
+# Ignorer Docker-volumen til PostgreSQL
+postgres-data/
+
+# Ignorer miljøvariabler
+.env
