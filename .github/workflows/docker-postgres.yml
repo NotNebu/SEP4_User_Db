@@ -14,9 +14,9 @@ jobs:
       postgres:
         image: postgres:16
         env:
-          POSTGRES_USER: myuser
-          POSTGRES_PASSWORD: mypassword
-          POSTGRES_DB: mydb
+          POSTGRES_USER: sep4
+          POSTGRES_PASSWORD: sep4
+          POSTGRES_DB: userdb
         ports:
           - 5432:5432
         options: >-
@@ -40,4 +40,4 @@ jobs:
       - name: Verify DB connection
         run: |
           sudo apt update && sudo apt install -y postgresql-client
-          PGPASSWORD=sep4frontend psql -h localhost -U sep4frontend -d userdb -c '\l'
+          PGPASSWORD=sep4 psql -h localhost -U sep4 -d userdb -c '\l'
